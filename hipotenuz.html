@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 140px;
+            padding: 140px;
+            
+            background-color: rgba(73, 73, 170, 0.664);
+        }
+        h2{
+            color: rgb(80, 10, 10);
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Hipotenuzun hesablanması:</h2>
+    <input type="text" placeholder="1. kateti daxil edin" id="katet1">
+    <input type="text" placeholder="2. kateti daxil edin" id="katet2">
+    <button  id="btn">Hesabla</button>
+    </div>
+    <div id="netice"></div>
+
+ 
+    <script>
+        function Hesabla(){
+        var k1=Number(document.getElementById('katet1').value);
+        var k2=Number(document.getElementById('katet2').value);
+        var hipotenuz=Math.sqrt((k1*k1)+(k2*k2));
+        document.getElementById('netice').innerHTML='Hipotenuz:'+hipotenuz;}
+        
+        var hesabBtn=document.getElementById('btn');
+        hesabBtn.onclick=Hesabla;
+    
+    </script>
+</body>
+
+
+</html>
